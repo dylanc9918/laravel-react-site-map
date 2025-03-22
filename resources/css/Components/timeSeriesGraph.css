@@ -1,0 +1,29 @@
+.recharts-surface {
+    background-color: #fefae0;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    z-index: -1;
+}
+
+.recharts-legend-item {
+    cursor: pointer;
+}
+
+.recharts-text {
+    fill: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+}
+
+.recharts-legend-item-text {
+    fill: black;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.recharts-cartesian-axis-tick {
+    font-size: 0.5rem !important;
+}
+
+.recharts-text .recharts-label tspan {
+    font-size: 1.5rem !important;
+}

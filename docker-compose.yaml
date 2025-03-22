@@ -1,0 +1,54 @@
+networks:
+  laravel:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.0.0/16
+
+services:
+  php:
+    container_name: php
+    build:
+      context: .
+      target: php
+      args:
+        - APP_ENV=${APP_ENV}
+      network: host
+    env_file: ./stack.env
+    environment:
+      - APP_ENV=${APP_ENV}
+    working_dir: /var/www
+    networks:
+      - laravel
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+      network: host
+    container_name: nginx
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www
+    ports:
+      - "7000:80"
+    volumes:
+      - /volume1/docker/portainer/compose/87/.docker/nginx/:/etc/nginx/conf.d/
+    depends_on:
+      - php
+    networks:
+      - laravel
+
+  r:
+    container_name: r_api
+    build:
+      context: .
+      target: r
+      network: host
+    ports:
+      - "8002:8000"
+    depends_on:
+      - php
+      - nginx
+    networks:
+      - laravel

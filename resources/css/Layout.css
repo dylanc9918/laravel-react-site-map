@@ -1,0 +1,21 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 100000;
+}
+
+.navbar-container .title {
+    color: white;
+    justify-self: start;
+    padding-bottom: 10%;
+    transform: translateX(-50%);
+    text-align: left;
+}
+
+.navbar-container .nav-link {
+    align-self: end;
+    transform: translateX(-100px);
+    justify-content: space-between;
+}
