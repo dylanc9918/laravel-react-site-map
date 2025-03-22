@@ -1,6 +1,6 @@
 ## Overview
 
-This application is a web-based project built using Laravel and React. It leverages Docker for containerization, making it easy to set up and deploy. The application is designed to provide a robust and scalable web platform with a modern frontend and a powerful backend.
+This application is a web-based project built using Laravel and React. It leverages Docker for containerization, making it easy to set up and deploy. The application is designed to provide a robust and scalable web platform with a modern front end and a powerful back end. This updated our current R shiny application to have a more modern look that had a more approachable user interface. Utilized R plumber to allow for more advanced statistical analysis. 
 
 ## Features
 
